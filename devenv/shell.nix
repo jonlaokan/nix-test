@@ -1,12 +1,17 @@
 { pkgs ? import <nixpkgs> {} }:
 
 pkgs.mkShell {
-    packages = [ pkgs.nodejs pkgs.python3 ];
-    
+    packages = [
+      pkgs.nodejs
+      pkgs.python3
+      pkgs.lolcat
+      pkgs.cowsay
+    ];
+
     shellHook = ''
-      echo "Project x shell"
+      fish
+      cowsay "Welcome into you dev shell" | lolcat
     '';
-    runtimeInputs = [ pkgs.cowsay pkgs.lolcat ];
 
     FOO = "BAR";
     BAR = "FOO";
