@@ -9,8 +9,4 @@ pkgs.mkShell {
         kubectl
         k9s
     ];
-
-    shellHook = ''
-      exec fish
-    '';
 }
