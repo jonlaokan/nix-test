@@ -9,7 +9,6 @@ pkgs.mkShell {
     ];
 
     shellHook = ''
-      fish
       cowsay "Welcome into you dev shell" | lolcat
     '';
 
